@@ -1,7 +1,7 @@
 import React from 'react';
 import { Map } from 'lucide-react';
 import TrafficMap from './components/Map';
-
+import TrafficMapWithData from './components/TrafficMapWithData';
 function App() {
   return (
     <div className="min-h-screen bg-gray-100">
@@ -24,13 +24,15 @@ function App() {
               View real-time traffic conditions with our interactive heat map. Red areas indicate heavy traffic.
             </p>
           </div>
-          
+          <div className="container mx-auto p-4">
+    </div>
           <div className="h-[600px]">
             <TrafficMap
-              center={{ lat: 40.7128, lng: -74.0060 }} // New York City coordinates
+              center={{ lat: 40.7128, lng: -74.0060 }}  
               zoom={13}
             />
           </div>
+          <TrafficMapWithData center={{ lat: 26.8467, lng: 80.9462 }} zoom={12} />
 
           <div className="mt-6">
             <div className="flex items-center justify-center space-x-2">
